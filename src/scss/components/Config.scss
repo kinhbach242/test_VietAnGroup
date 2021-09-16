@@ -1,0 +1,92 @@
+.config {
+  &__center {
+    display: flex;
+    flex: 1;
+    padding: 22px 24px;
+    gap: 24px;
+    .title {
+      font-weight: 600;
+      line-height: 20px;
+      color: $text-hover;
+    }
+    &_nav {
+      width: 185px;
+      .nav_calc {
+        margin-top: 20px;
+      }
+      .nav_items {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        .config_link {
+          color: $text1;
+          padding: 12px 0 12px 12px;
+          &:hover {
+            color: $text-hover;
+          }
+        }
+      }
+    }
+    &_content {
+      flex: 1;
+      .content_header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-border;
+      }
+      .content_table {
+        .table_header {
+          display: flex;
+          padding: 12px 0 12px;
+          gap: 15px;
+          justify-content: space-between;
+          border-bottom: 1px solid $color-border;
+        }
+        .th_title {
+          flex: 1;
+          font-weight: 600;
+        }
+        .th_title:nth-child(3) {
+          flex: 2;
+        }
+        .table_data {
+          padding: 12px 0;
+          .ant-menu-item {
+            max-height: 70px !important;
+            margin: 12px 0;
+            padding: 0 !important;
+            p {
+              margin: 0;
+            }
+            .ant-menu-title-content {
+              display: flex !important;
+              justify-content: space-between !important;
+              align-items: center !important;
+              color: $text1 !important;
+              gap: 15px;
+              &:hover {
+                color: $text-hover !important;
+                transition: 0.5s !important;
+              }
+              .code_data {
+                flex: 1 !important;
+              }
+              .name_data {
+                flex: 1 !important;
+              }
+              .address_data {
+                flex: 2 !important;
+                white-space: normal;
+                line-height: 1.5;
+              }
+              .date_data {
+                flex: 1 !important;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

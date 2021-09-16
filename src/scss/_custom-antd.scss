@@ -1,0 +1,32 @@
+.ant-menu-light {
+  margin-top: -9px !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+.ant-menu-submenu-title {
+  padding: 0 !important;
+  color: $text1 !important;
+  font-weight: 600 !important;
+  transition: 0.3s;
+  &:hover {
+    color: $text-hover !important;
+  }
+}
+.ant-menu-sub {
+  background-color: transparent !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: $text3 !important;
+}
+.ant-menu-submenu-arrow::before,
+.ant-menu-submenu-arrow::after {
+  height: 2px !important;
+}
+.ant-menu-item-only-child {
+  padding: 0 !important;
+}

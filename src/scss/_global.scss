@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+a,
+Link {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+button {
+  display: flex;
+}
+.active {
+  background-color: #eef3ff;
+  color: #2c5de5 !important;
+  font-weight: 600;
+}
