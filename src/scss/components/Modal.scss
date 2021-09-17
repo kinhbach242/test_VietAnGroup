@@ -1,0 +1,29 @@
+.modal_box {
+  .ant-modal-body {
+    padding: 0 24px 24px 24px !important;
+  }
+  .form_modal {
+    width: 100%;
+    .form_content {
+      margin-bottom: 24px;
+      width: 100%;
+      display: flex;
+      gap: 38px;
+      .label_form {
+        margin-bottom: 8px;
+      }
+      .note {
+        color: #e23b40;
+      }
+      .sub-title {
+        margin-top: 8px;
+      }
+      &_left {
+        flex: 1;
+      }
+      &_right {
+        flex: 1;
+      }
+    }
+  }
+}

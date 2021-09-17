@@ -39,19 +39,27 @@
     .sidebar_navigation {
       display: flex;
       flex-direction: column;
-      gap: 32px;
-      padding: 0 32px;
+      padding: 0 16px;
       .navigation-item {
+        margin-top: 8px;
+        border-radius: 4px;
         display: flex;
-        padding: 10px;
+        padding: 14px 18px;
         color: $text1;
         transition: 0.3s;
-        i {
-          font-size: 18px;
+        .icon_svg {
           margin-right: 10px;
+          #icon-slider {
+            fill: $text1;
+            transition: 0.3s;
+          }
         }
         &:hover {
           color: $text-hover;
+          #icon-slider {
+            fill: $text-hover;
+          }
+          transition: 0.3s;
         }
       }
     }

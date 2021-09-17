@@ -1,5 +1,5 @@
 .ant-menu-light {
-  margin-top: -9px !important;
+  margin-top: -5px !important;
   width: 100% !important;
   background-color: transparent !important;
   border: none !important;
@@ -10,6 +10,8 @@
 }
 .ant-menu-submenu-title {
   padding: 0 !important;
+  height: 20px !important;
+  line-height: 20px !important;
   color: $text1 !important;
   font-weight: 600 !important;
   transition: 0.3s;
@@ -29,4 +31,11 @@
 }
 .ant-menu-item-only-child {
   padding: 0 !important;
+  height: 20px !important;
+  line-height: 20px !important;
+  padding: 16px 0 !important;
+}
+.ant-btn-primary {
+  background-color: $text-hover !important;
+  border-color: $text-hover !important;
 }

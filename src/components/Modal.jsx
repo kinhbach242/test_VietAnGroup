@@ -14,6 +14,7 @@ function ModalBox(props) {
   return (
     <>
       <Modal
+        className="modal_box"
         title={data.name}
         width={600}
         visible={isModalVisible}
@@ -22,88 +23,73 @@ function ModalBox(props) {
       >
         <Tabs defaultActiveKey="1">
           <TabPane tab="Thông tin" key="1">
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                gap: "20px",
-                justifyContent: "space-between",
-              }}
-            >
-              <Form
-                form={form}
-                layout="vertical"
-                name="basic"
-                initialValues={{ remember: true }}
-                autoComplete="off"
-              >
-                <Form.Item
-                  label="Mã trạm"
-                  name="code"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập mã trạm!" },
-                  ]}
-                >
-                  <Input defaultValue={data.code} placeholder="Nhập mã trạm" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Kinh độ"
-                  name="longitude"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập mã kinh độ!" },
-                  ]}
-                >
-                  <Input placeholder="Nhập kinh độ" />
-                </Form.Item>
-                <Form.Item
-                  label="Địa chỉ"
-                  name="address"
-                  rules={[
-                    { required: true, message: "Vui lòng nhập địa chỉ!" },
-                  ]}
-                >
-                  <Input
-                    defaultValue={data.address}
-                    placeholder="Nhập địa chỉ"
-                  />
-                </Form.Item>
-              </Form>
-              <Form
-                form={form}
-                layout="vertical"
-                name="basic"
-                initialValues={{ remember: true }}
-                autoComplete="off"
-              >
-                <Form.Item
-                  label="Tên trạm"
-                  name="name"
-                  rules={[
-                    { required: true, message: "Please input your username!" },
-                  ]}
-                >
-                  <Input defaultValue={data.name} placeholder="Nhập tên trạm" />
-                </Form.Item>
-
-                <Form.Item label="Loại trạm" name="type">
-                  <Select
-                    showSearch
-                    style={{ width: "100%" }}
-                    placeholder="Chọn loại trạm"
-                  >
-                    <Option value="1">Không khí</Option>
-                    <Option value="2">Nước</Option>
-                    <Option value="3">Đất</Option>
-                  </Select>
-                </Form.Item>
-              </Form>
-            </div>
-            <Form.Item>
+            <div className="form_modal">
+              <form action="" className="form_content">
+                <div className="form_content_left">
+                  <div className="form_code">
+                    <p className="label_form title-large">
+                      Mã trạm <span className="note">(*)</span>
+                    </p>
+                    <Input
+                      size="large"
+                      placeholder="Mã trạm của bạn"
+                      value={data.code}
+                    />
+                    <p className="sub-title">Đây là mã không thể đổi</p>
+                  </div>
+                  <div className="form_longitude">
+                    <p className="label_form title-large">
+                      Kinh độ <span className="note">(*)</span>
+                    </p>
+                    <Input size="large" placeholder="Mã trạm của bạn" />
+                    <p className="sub-title">Đây là mã không thể đổi</p>
+                  </div>
+                  <div className="form_address">
+                    <p className="label_form title-large">
+                      Địa chỉ<span className="note">(*)</span>
+                    </p>
+                    <Input
+                      size="large"
+                      placeholder="Địa chỉ của bạn"
+                      value={data.address}
+                    />
+                    <p className="sub-title">Đây là mã không thể đổi</p>
+                  </div>
+                </div>
+                <div className="form_content_right">
+                  <div className="form_name">
+                    <p className="label_form title-large">
+                      Tên trạm <span className="note">(*)</span>
+                    </p>
+                    <Input size="large" placeholder="Tên trạm quan trắc" />
+                    <p className="sub-title">Đặt tên để dễ tìm kiếm</p>
+                  </div>
+                  <div className="form_latitude">
+                    <p className="label_form title-large">
+                      Vĩ độ <span className="note">(*)</span>
+                    </p>
+                    <Input size="large" placeholder="Tên trạm quan trắc" />
+                    <p className="sub-title">Đặt tên để dễ tìm kiếm</p>
+                  </div>
+                  <div className="form_type">
+                    <p className="label_form title-large">Loại trạm</p>
+                    <Select
+                      labelInValue
+                      style={{ width: "100%" }}
+                      defaultValue={{ value: "atmosphere" }}
+                    >
+                      <Option value="atmosphere">Không khí</Option>
+                      <Option value="water">Nước</Option>
+                      <Option value="soil">Đất</Option>
+                    </Select>
+                    ,
+                  </div>
+                </div>
+              </form>
               <Button type="primary" htmlType="submit">
                 Cập nhật
               </Button>
-            </Form.Item>
+            </div>
           </TabPane>
           <TabPane tab="Thông số" key="2">
             Thông số

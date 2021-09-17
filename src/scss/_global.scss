@@ -20,5 +20,9 @@ button {
 .active {
   background-color: #eef3ff;
   color: #2c5de5 !important;
+  border-radius: 4px;
   font-weight: 600;
+  #icon-slider {
+    fill: #2c5de5 !important;
+  }
 }
