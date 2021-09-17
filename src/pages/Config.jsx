@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { Button, Menu } from "antd";
 import { PlusOutlined, DownOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
-import ModalBox from "../components/Modal";
+import Modal2 from "../components/Modal2";
 const { SubMenu } = Menu;
 const datas = [
   {
@@ -215,12 +215,7 @@ function Config() {
             </div>
           </div>
         </div>
-        {/* <ModalBox2
-          isModalVisible={isModalVisible}
-          setIsModalVisible={setIsModalVisible}
-          data={dataModal}
-        /> */}
-        <ModalBox
+        <Modal2
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}
           data={dataModal}

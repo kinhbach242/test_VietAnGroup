@@ -1,25 +1,22 @@
 import React from "react";
-import { Modal, Tabs, Input, Form, Button, Select } from "antd";
+import { Drawer, Tabs, Input, Form, Button, Select } from "antd";
 const { TabPane } = Tabs;
 const { Option } = Select;
 
-function ModalBox(props) {
+function Modal2(props) {
   const { isModalVisible, setIsModalVisible, data } = props;
   const [form] = Form.useForm();
   form.resetFields();
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-
   return (
     <>
-      <Modal
-        className="modal_box"
+      <Drawer
         title={data.name}
-        width={750}
+        placement="right"
+        onClose={handleCancel}
         visible={isModalVisible}
-        onCancel={handleCancel}
-        footer={false}
       >
         <Tabs defaultActiveKey="1">
           <TabPane tab="Thông tin" key="1">
@@ -104,9 +101,9 @@ function ModalBox(props) {
             Camera
           </TabPane>
         </Tabs>
-      </Modal>
+      </Drawer>
     </>
   );
 }
 
-export default ModalBox;
+export default Modal2;
