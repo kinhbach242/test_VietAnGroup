@@ -1,6 +1,17 @@
 .modal_box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  .ant-modal-title {
+    font-weight: 700 !important;
+    font-size: 20px !important;
+  }
+  .ant-modal-content {
+    height: 100vh;
+  }
   .ant-modal-body {
-    padding: 0 24px 24px 24px !important;
+    padding: 0 24px !important;
   }
   .form_modal {
     width: 100%;

@@ -1,10 +1,15 @@
 .sidebar {
   width: 279px;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background: $bg-sidebar;
+  border-right: 1px solid $color-border;
   &__header {
     align-items: center;
-    padding: 26px 23px;
+    height: 76px;
+    padding: 16px 23px;
     display: flex;
     border-bottom: 1px solid $color-border;
     .header_logo {
@@ -13,7 +18,7 @@
       margin-right: 15px;
     }
     .header_text {
-      margin-right: 12px;
+      margin-right: 10px;
       &-title {
         margin: 0;
       }
@@ -36,6 +41,7 @@
     }
   }
   &__navigation {
+    flex: 1;
     .sidebar_navigation {
       display: flex;
       flex-direction: column;
@@ -61,6 +67,27 @@
           }
           transition: 0.3s;
         }
+      }
+    }
+  }
+  &__footer {
+    align-items: center;
+    height: 76px;
+    padding: 16px 23px;
+    display: flex;
+    border-top: 1px solid $color-border;
+    .footer_logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
+    .footer_text {
+      margin-right: 10px;
+      &-title {
+        margin: 0;
+      }
+      .sub-title {
+        margin: 0;
       }
     }
   }

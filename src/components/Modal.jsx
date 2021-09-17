@@ -16,7 +16,7 @@ function ModalBox(props) {
       <Modal
         className="modal_box"
         title={data.name}
-        width={600}
+        width={750}
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={false}

@@ -10,7 +10,7 @@ const datas = [
     id: 1,
     key: "1",
     code: "HN_Air_KHI",
-    name: "Hà Nội Capital",
+    name: "Ha Noi Capital",
     address:
       "556 Nguyen Gia Cu, Gia Thuy Ward, Long Bien District, Ha Noi Capital",
     date: "20/5/2021",
@@ -215,6 +215,11 @@ function Config() {
             </div>
           </div>
         </div>
+        {/* <ModalBox2
+          isModalVisible={isModalVisible}
+          setIsModalVisible={setIsModalVisible}
+          data={dataModal}
+        /> */}
         <ModalBox
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}

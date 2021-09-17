@@ -1,7 +1,16 @@
 .config {
+  .ant-menu-item-selected {
+    border-radius: 4px !important;
+    background-color: #f9f9f9 !important;
+    &::after {
+      opacity: 0;
+    }
+  }
   &__center {
     display: flex;
+    position: relative;
     flex: 1;
+    height: 100%;
     padding: 22px 24px;
     gap: 24px;
     .title {
@@ -61,6 +70,9 @@
         }
         .table_data {
           padding: 12px 0;
+          .ant-menu-item-icon {
+            margin-right: 13px;
+          }
           .ant-menu-submenu-arrow::before,
           .ant-menu-submenu-arrow::after {
             background-color: white !important;

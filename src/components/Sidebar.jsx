@@ -140,6 +140,14 @@ function Sidebar() {
             </NavLink>
           </div>
         </div>
+        <div className="sidebar__footer">
+          <div className="footer_logo">
+            <img src={Logo} alt="" />
+          </div>
+          <div className="footer_text">
+            <p className="footer_text-title title-large">iLoutsLand</p>
+          </div>
+        </div>
       </div>
     </>
   );
